@@ -22,7 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
 });
 
-// Eliminada la función de cambio de tema, modo oscuro siempre activo
+//Boton de scroll al inicio
+document.addEventListener('DOMContentLoaded', function() {
+    const goTopBtn = document.getElementById('goTopBtn');
+    // Ocultar al inicio
+    goTopBtn.style.display = 'none';
+    // Mostrar/ocultar según scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) {
+            goTopBtn.style.display = 'flex';
+        } else {
+            goTopBtn.style.display = 'none';
+        }
+    });
+    goTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
 
 // Navegación y scroll activo
 function initNavigation() {
