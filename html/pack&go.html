@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="../img/pack&go.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack&Go – Kits de aventura personalizables</title>
+    <link rel="stylesheet" href="../css/pack&go.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Pack&Go</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Inicio</a>
+                <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+                <a href="#planes" class="nav-link">Planes</a>
+                <a href="#testimonios" class="nav-link">Testimonios</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Aventura en la naturaleza">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="highlight">Pack</span>&Go
+            </h1>
+            <p class="hero-subtitle">Tu aventura perfecta, empacada con amor</p>
+            <p class="hero-description">
+                Kits de aventura personalizables con todo lo necesario para escapadas al aire libre. 
+                Mochila técnica, snacks artesanales, guías locales y productos 100% sostenibles.
+            </p>
+            <div class="hero-buttons">
+                <a href="#planes" class="cta-btn primary">
+                    <i class="fas fa-rocket"></i>
+                    Crea tu kit ahora
+                </a>
+                <a href="#como-funciona" class="cta-btn secondary">
+                    <i class="fas fa-play"></i>
+                    Ver cómo funciona
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Características principales -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Comodidad total</h3>
+                    <p>Olvídate de comprar y empacar por separado</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Personalización</h3>
+                    <p>Adaptado a tu nivel y preferencias</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sostenibilidad</h3>
+                    <p>Materiales eco-friendly y proyectos locales</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Experiencia local</h3>
+                    <p>Colaboramos con guías y artesanos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona" class="steps">
+        <div class="container">
+            <h2 class="section-title">¿Cómo funciona?</h2>
+            <div class="steps-grid">
+                <div class="step" data-step="1">
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Elegir destino">
+                    </div>
+                    <div class="step-content">
+                        <span class="step-number">01</span>
+                        <h3>Elige destino y duración</h3>
+                        <p>Selecciona tu lugar favorito y el tiempo de tu aventura. Tenemos opciones para todos los niveles.</p>
+                    </div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Personalizar kit">
+                    </div>
+                    <div class="step-content">
+                        <span class="step-number">02</span>
+                        <h3>Personaliza tu kit</h3>
+                        <p>Adapta tu kit según tu nivel, gustos alimentarios y necesidades específicas de la aventura.</p>
+                    </div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Recibir y explorar">
+                    </div>
+                    <div class="step-content">
+                        <span class="step-number">03</span>
+                        <h3>Recibe y explora</h3>
+                        <p>Recibe tu kit personalizado en casa y ¡sal a vivir la aventura de tu vida!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido del kit -->
+    <section class="kit-content">
+        <div class="container">
+            <div class="kit-showcase">
+                <div class="kit-image">
+                    <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Kit de aventura">
+                </div>
+                <div class="kit-details">
+                    <h2>¿Qué incluye tu kit?</h2>
+                    <div class="kit-items">
+                        <div class="kit-item">
+                            <i class="fas fa-hiking"></i>
+                            <div>
+                                <h4>Mochila técnica</h4>
+                                <p>Equipamiento profesional y accesorios de alta calidad</p>
+                            </div>
+                        </div>
+                        <div class="kit-item">
+                            <i class="fas fa-cookie-bite"></i>
+                            <div>
+                                <h4>Snacks energéticos</h4>
+                                <p>Productos artesanales nutritivos y deliciosos</p>
+                            </div>
+                        </div>
+                        <div class="kit-item">
+                            <i class="fas fa-map"></i>
+                            <div>
+                                <h4>Mini-guía</h4>
+                                <p>Rutas detalladas y consejos de seguridad locales</p>
+                            </div>
+                        </div>
+                        <div class="kit-item">
+                            <i class="fas fa-recycle"></i>
+                            <div>
+                                <h4>Extras eco</h4>
+                                <p>Productos sostenibles y reutilizables</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes y precios -->
+    <section id="planes" class="plans">
+        <div class="container">
+            <h2 class="section-title">Planes y precios</h2>
+            <div class="plans-grid">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h3>Día de ruta</h3>
+                        <div class="price">
+                            <span class="currency">S/</span>
+                            <span class="amount">89</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>Mochila técnica</li>
+                        <li><i class="fas fa-check"></i>Snacks artesanales</li>
+                        <li><i class="fas fa-check"></i>Mini-guía de rutas</li>
+                        <li><i class="fas fa-check"></i>Ahorra 10%</li>
+                    </ul>
+                    <button class="plan-btn">Elegir plan</button>
+                </div>
+                <div class="plan featured">
+                    <div class="plan-badge">Más popular</div>
+                    <div class="plan-header">
+                        <h3>Fin de semana</h3>
+                        <div class="price">
+                            <span class="currency">S/</span>
+                            <span class="amount">159</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>Todo lo anterior</li>
+                        <li><i class="fas fa-check"></i>Extras eco premium</li>
+                        <li><i class="fas fa-check"></i>Kit de primeros auxilios</li>
+                        <li><i class="fas fa-check"></i>Ahorra 15%</li>
+                    </ul>
+                    <button class="plan-btn">Elegir plan</button>
+                </div>
+                <div class="plan">
+                    <div class="plan-header">
+                        <h3>Aventura Pro</h3>
+                        <div class="price">
+                            <span class="currency">S/</span>
+                            <span class="amount">249</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>Todo lo anterior</li>
+                        <li><i class="fas fa-check"></i>Asesoría personalizada</li>
+                        <li><i class="fas fa-check"></i>Equipamiento premium</li>
+                        <li><i class="fas fa-check"></i>Ahorra 20%</li>
+                    </ul>
+                    <button class="plan-btn">Elegir plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros aventureros</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"¡Me encantó la personalización y la calidad de los productos! Todo llegó perfectamente organizado."</p>
+                    </div>
+                    <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Carla R.">
+                        <div>
+                            <h4>Carla R.</h4>
+                            <span>Aventurera frecuente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Ideal para quienes no quieren complicarse empacando. El servicio es excelente y muy profesional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Luis M.">
+                        <div>
+                            <h4>Luis M.</h4>
+                            <span>Montañista</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"El kit eco-friendly y la guía local fueron lo mejor. Una experiencia completamente auténtica."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sofía T.">
+                        <div>
+                            <h4>Sofía T.</h4>
+                            <span>Eco-aventurera</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sostenibilidad -->
+    <section class="sustainability">
+        <div class="container">
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h2>Compromiso con la sostenibilidad</h2>
+                    <p>En Pack&Go creemos en aventuras responsables. Utilizamos materiales reciclados, colaboramos con proyectos de reforestación y apoyamos a artesanos locales en cada destino.</p>
+                    <div class="sustainability-stats">
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Árboles plantados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Materiales reciclados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Artesanos locales</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sustainability-image">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Naturaleza sostenible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿A dónde envían?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Enviamos a todo el Perú. Los envíos a Lima llegan en 24-48 horas, y a provincias en 2-5 días hábiles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Puedo devolver el kit?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones dentro de los 7 días posteriores a la recepción, siempre que los productos estén en perfecto estado.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Tienen opciones para alergias?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Puedes personalizar los snacks según tus alergias, intolerancias o preferencias dietéticas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué métodos de pago aceptan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceptamos todas las tarjetas de crédito/débito, transferencias bancarias, Yape, Plin y contraentrega.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>Pack&Go</span>
+                    </div>
+                    <p>Tu aventura perfecta, empacada con amor.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#como-funciona">Cómo funciona</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Términos de servicio</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir ofertas especiales y consejos de aventura.</p>
+                    <form class="newsletter" id="newsletter-form">
+                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pack&Go. Todos los derechos reservados.</p>
+                <a href="#planes" class="footer-cta">
+                    <i class="fas fa-rocket"></i>
+                    ¡Crea tu kit ahora!
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pack&go.js"></script>
+</body>
+</html>

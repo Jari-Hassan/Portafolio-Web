@@ -53,22 +53,31 @@ Portafolio personal de Jari Hassan, estudiante de Ingeniería de Software especi
 
 ```
 portafolio/
-├── index.html              # Página principal
-├── style.css              # Estilos principales
-├── javascript.js          # Funcionalidad JavaScript
+├── README.md
 ├── assets/
-│   └── cv-jari-hassan.pdf # CV para descarga
-├── task.html              # Proyecto Task Manager
-├── task.css               # Estilos del Task Manager
-├── task.js                # JavaScript del Task Manager
-├── num_secreto.html       # Juego Número Secreto
-├── num_secreto.css        # Estilos del juego
-├── num_secreto.js         # JavaScript del juego
-├── gravityflip.html       # Juego Gravity Flip
-├── gravityflip.css        # Estilos del juego
-├── gravityflip.js         # JavaScript del juego
-├── bola.css               # Estilos adicionales
-└── README.md              # Documentación
+│   └── cv-jari-hassan.pdf
+├── html/
+│   ├── index.html         # Página principal del portafolio
+│   ├── gravityflip.html   # Juego Gravity Flip
+│   ├── num_secreto.html   # Juego Número Secreto
+│   ├── pack&go.html       # Landing page Pack&Go
+│   └── task.html          # Proyecto Task Manager
+├── css/
+│   ├── style.css          # Estilos principales del portafolio
+│   ├── gravityflip.css    # Estilos del juego Gravity Flip
+│   ├── num_secreto.css    # Estilos del juego Número Secreto
+│   ├── pack&go.css        # Estilos de la landing Pack&Go
+│   └── task.css           # Estilos del Task Manager
+│   └── bola.css           # Estilos adicionales
+├── js/
+│   ├── javascript.js      # Funcionalidad principal del portafolio
+│   ├── gravityflip.js     # JS del juego Gravity Flip
+│   ├── num_secreto.js     # JS del juego Número Secreto
+│   ├── pack&go.js         # JS de la landing Pack&Go
+│   └── task.js            # JS del Task Manager
+├── img/
+│   └── favicon.png        # Favicon y otras imágenes
+└── LICENSE
 ```
 
 ## 🚀 Funcionalidades
@@ -86,13 +95,31 @@ portafolio/
 2. **Número Secreto** - Juego interactivo de adivinanza
 3. **Gravity Flip** - Juego de plataformas con gravedad
 
+### 🎒 Pack&Go – Kits de aventura personalizables
+**Pack&Go** es una landing page incluida en este portafolio, desarrollada como ejemplo de proyecto real de e-commerce para experiencias de aventura.  
+Incluye:
+
+- **Página principal con hero animado y fondo con partículas**
+- **Sección de características** (comodidad, personalización, sostenibilidad, experiencia local)
+- **Pasos de compra** visuales y animados
+- **Showcase de kit** con tarjetas interactivas y hover animado
+- **Planes y precios** con tarjetas escalables y delineado al hacer hover
+- **Testimonios** con slider y fotos reales
+- **Sección de sostenibilidad** con estadísticas animadas
+- **Preguntas frecuentes** (FAQ) con acordeón interactivo
+- **Footer completo** con enlaces, redes sociales y newsletter
+- **Favicon personalizado**
+- **Responsive design** y accesibilidad
+
+**Tecnologías:**  
+HTML5, CSS3 (Grid/Flexbox, variables, animaciones), JavaScript modular, FontAwesome, Google Fonts.
+
 ### 🌐 Funcionalidades Técnicas
 - **Cambio de idioma** (Español/Inglés)
 - **Navegación suave** entre secciones
 - **Indicador de progreso** de scroll
 - **Botón "ir arriba"** con animación
 - **Modal de éxito** para formulario
-- **Descarga de CV** funcional
 
 ## 📱 Responsive Design
 
@@ -154,8 +181,7 @@ El sitio está optimizado para obtener altas puntuaciones en:
 
 - **Portfolio**: [https://jari-upc.github.io/](https://jari-upc.github.io/)
 - **LinkedIn**: [linkedin.com/in/jari-hassan](https://linkedin.com/in/Jari-UPC)
-- **GitHub**: [github.com/jarihassan](https://github.com/jarihassan)
-- **WhatsApp**: +51 932 572 013
+- **GitHub**: [github.com/jarihassan](https://github.com/Jari-UPC)
 - **Instagram**: [@jarihassan_](https://instagram.com/jarihassan_)
 
 ## 📄 Licencia
