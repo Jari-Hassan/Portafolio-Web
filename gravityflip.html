@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Flip</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%80%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="gravityflip.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="gravity-container glass">
+        <!-- Menú principal -->
+        <div id="gravity-menu" class="gravity-menu">
+            <div class="gravity-menu-card">
+                <div class="gravity-menu-icon">🌀</div>
+                <h1 class="gravity-title">Gravity Flip</h1>
+                <p class="gravity-desc">
+                    <b>¡Invierte la gravedad con <span class="key">Espacio</span>!</b><br>
+                    Esquiva trampas, recoge <span class="star">⭐</span> y llega a la <span class="door">🚪</span>.<br>
+                    <span class="gravity-controls">
+                        <span class="key">←</span>/<span class="key">→</span> o <span class="key">A</span>/<span class="key">D</span> para moverte<br>
+                    </span>
+                </p>
+                <button class="gravity-btn" id="gravity-play-btn">Jugar</button>
+            </div>
+        </div>
+
+        <!-- HUD del juego -->
+        <div id="gravity-hud" class="gravity-hud" style="display:none;">
+            <span class="hearts" id="gravity-hearts"></span>
+            <span class="stars" id="gravity-stars"></span>
+            <span class="timer" id="gravity-timer"></span>
+        </div>
+
+        <!-- Canvas del juego -->
+        <canvas id="gravity-canvas" class="gravity-canvas" width="384" height="512" style="display:none;"></canvas>
+
+        <!-- Pantalla de pausa -->
+        <div id="gravity-pause" class="gravity-pause" style="display:none;">
+            <h2>Pausa</h2>
+            <button class="gravity-btn" id="gravity-continue-btn">Continuar</button>
+            <button class="gravity-btn" id="gravity-restart-btn">Reiniciar nivel</button>
+        </div>
+
+        <!-- Pantalla de nivel completado -->
+        <div id="gravity-end" class="gravity-end" style="display:none;">
+            <div class="gravity-menu-card" style="box-shadow:none; background:transparent; padding:0; max-width:unset;">
+                <h2 style="margin-bottom:10px;">¡Nivel completado!</h2>
+                <div class="stats" id="gravity-end-stats"></div>
+                <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+                    <button class="gravity-btn" id="gravity-next-btn" style="width:180px;">Siguiente nivel</button>
+                    <button class="gravity-btn" id="gravity-retry-btn" style="width:180px;">Reintentar</button>
+                    <a href="index.html" class="gravity-btn" style="width:180px; text-align:center;">Volver al Portafolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla de game over -->
+        <div id="gravity-gameover" class="gravity-gameover" style="display:none;">
+            <div class="gravity-menu-card" style="box-shadow:none; background:transparent; padding:0; max-width:unset;">
+                <h2 style="margin-bottom:10px;">Game Over</h2>
+                <div class="stats" id="gravity-gameover-stats"></div>
+                <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+                    <button class="gravity-btn" id="gravity-retry2-btn" style="width:180px;">Reintentar nivel</button>
+                    <a href="index.html" class="gravity-btn" style="width:180px; text-align:center;">Volver al Portafolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="gravityflip.js"></script>
+</body>
+</html>
