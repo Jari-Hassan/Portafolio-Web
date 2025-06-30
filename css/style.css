@@ -1065,3 +1065,243 @@ body {
         font-size: 1.4em;
     }
 }
+
+/* ===== RESPONSIVE DESIGN MEJORADO ===== */
+@media (max-width: 768px) {
+    .navbar {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 60px;
+        padding: 6px;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        max-width: 350px;
+    }
+
+    .navbar.open {
+        max-height: 300px;
+        padding: 12px;
+    }
+
+    .nav-item {
+        padding: 12px 16px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .navbar.open .nav-item {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        top: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .lang-toggle {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.4rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .section {
+        padding: 50px 15px;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        margin-bottom: 40px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .project-card {
+        margin: 0 5px;
+    }
+
+    .go-top-glass {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: calc(100% - 20px);
+        top: 5px;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .lang-toggle {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 0 10px;
+        min-height: 90vh;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 5vw, 1.2rem);
+    }
+
+    .section {
+        padding: 40px 10px;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .contact-form {
+        padding: 20px 15px;
+        margin: 0 5px;
+    }
+
+    .form-input, .form-textarea {
+        padding: 12px 15px;
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .skill-category {
+        padding: 15px;
+    }
+
+    .go-top-glass {
+        bottom: 10px;
+        right: 10px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .go-top-glass svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ===== MENU HAMBURGESA MEJORADO ===== */
+.menu-toggle span {
+    position: relative;
+}
+
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.menu-toggle span::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.menu-toggle.open span {
+    background: transparent;
+}
+
+.menu-toggle.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}

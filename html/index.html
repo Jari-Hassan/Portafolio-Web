@@ -270,37 +270,43 @@
     </section>
 
     <!-- Apartado Páginas Web -->
-    <section id="webpages" class="section">
-        <h2 class="section-title">
-            <span class="lang-es">Páginas Web</span>
-            <span class="lang-en" style="display:none;">Web Pages</span>
-        </h2>
-        <div class="projects-grid">
-            <a href="pack&go.html" target="_blank" class="project-card glow project-link-card">
-                <div class="project-image">🌐</div>
-                <div class="project-content">
-                    <h3 class="project-title">Pack&Go</h3>
-                    <p class="project-description">
-                        <span class="lang-es">
-                            Página de aterrizaje moderna y responsiva para promoción de servicios profesionales.
-                        </span>
-                        <span class="lang-en" style="display:none;">
-                            Modern and responsive landing page for professional services promotion.
-                        </span>
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <span class="project-link primary">
-                            <span class="lang-es">Ver Página</span>
-                            <span class="lang-en" style="display:none;">View Page</span>
-                        </span>
-                    </div>
-                </div>
-            </a>
+   <section id="webpages" class="section">
+    <h2 class="section-title">
+        <span class="lang-es">Páginas Web</span>
+        <span class="lang-en" style="display:none;">Web Pages</span>
+    </h2>
+    <div class="projects-grid">
+        <a href="pack&go.html" target="_blank" class="project-card glow project-link-card">
+    <div class="project-image" style="background: #eaf7ec; border-radius: 1.2rem; overflow: hidden; min-height: 140px; display: flex; align-items: center; justify-content: center;">
+        <img src="../img/pack&go.png" alt="Preview Pack&Go" style="width: 100%; max-width: 320px; object-fit: cover; border-radius: 1.2rem; box-shadow: 0 4px 24px rgba(44,85,48,0.10);">
+    </div>
+    <div class="project-content">
+        <h3 class="project-title">Pack&Go</h3>
+        <p class="project-description">
+            <span class="lang-es">
+                Landing page moderna y responsiva para kits de aventura personalizables.<br>
+                Incluye animaciones, tarjetas interactivas, testimonios reales y sección de planes.<br>
+                <strong>Ideal para inspirar escapadas al aire libre.</strong>
+            </span>
+            <span class="lang-en" style="display:none;">
+                Modern and responsive landing page for customizable adventure kits.<br>
+                Includes animations, interactive cards, real testimonials, and pricing section.<br>
+                <strong>Perfect to inspire outdoor getaways.</strong>
+            </span>
+        </p>
+        <div class="project-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+            <span class="project-link primary">
+                <span class="lang-es">Ver Página</span>
+                <span class="lang-en" style="display:none;">View Page</span>
+            </span>
+        </div>
+    </div>
+</a>
             <a href="https://ejemplo2.com" target="_blank" class="project-card glow project-link-card">
                 <div class="project-image">🛒</div>
                 <div class="project-content">
@@ -361,7 +367,7 @@
             <span class="lang-en" style="display:none;">Contact me!</span>
         </h2>
 
-<form class="contact-form" action="https://formsubmit.co/627a87e38d1c61b09982899a909dabf4" method="POST" autocomplete="off">
+<form class="contact-form" id="contactForm" action="https://formsubmit.co/627a87e38d1c61b09982899a909dabf4" method="POST" autocomplete="off">
             <div class="form-group">
                 <label for="nombre" class="form-label">
                     <span class="lang-es">Nombre</span>
@@ -392,6 +398,16 @@
                 <span class="lang-en" style="display:none;">Send message</span>
             </button>
         </form>
+        <div id="formSuccess" style="display:none; text-align:center; margin-top:2rem;">
+            <svg width="64" height="64" fill="none" viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r="30" stroke="#2c5530" stroke-width="4" fill="#eaf7ec"/>
+                <path d="M20 34l8 8 16-16" stroke="#2c5530" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p style="color:#2c5530; font-size:1.2rem; margin-top:1rem;">
+                <span class="lang-es">¡Mensaje enviado con éxito!</span>
+                <span class="lang-en" style="display:none;">Message sent successfully!</span>
+            </p>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -437,3 +453,4 @@
     <script src="../js/javascript.js"></script>
 </body>
 </html>
+

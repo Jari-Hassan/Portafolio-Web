@@ -137,13 +137,14 @@ function initSmoothScroll() {
 
 // Formulario de contacto
 function initContactForm() {
-    const contactForm = document.querySelector('.contact-form');
-    if (!contactForm) return;
-    
+    const contactForm = document.getElementById('contactForm');
+    const successDiv = document.getElementById('formSuccess');
+    if (!contactForm || !successDiv) return;
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const formData = new FormData(contactForm);
-        
+
         fetch(contactForm.action, {
             method: 'POST',
             body: formData,
@@ -151,7 +152,16 @@ function initContactForm() {
         })
         .then(response => {
             if (response.ok) {
-                showSuccessPopup();
+                contactForm.style.opacity = '0.5';
+                contactForm.querySelector('button[type="submit"]').disabled = true;
+                setTimeout(() => {
+                    contactForm.style.display = 'none';
+                    successDiv.style.display = 'block';
+                    successDiv.animate([
+                        { opacity: 0, transform: 'scale(0.8)' },
+                        { opacity: 1, transform: 'scale(1)' }
+                    ], { duration: 500, fill: 'forwards' });
+                }, 800);
                 contactForm.reset();
             } else {
                 alert('Hubo un error al enviar el mensaje. Intenta nuevamente.');
@@ -217,14 +227,44 @@ function initLanguageToggle() {
     });
 }
 
-// Menú móvil
+// Menú móvil mejorado
 function initMobileMenu() {
     const menuToggle = document.getElementById('menuToggle');
     const navbar = document.getElementById('navbar');
+    const navItems = document.querySelectorAll('.nav-item');
     
     menuToggle.addEventListener('click', () => {
         navbar.classList.toggle('open');
         menuToggle.classList.toggle('open');
+    });
+
+    // Cerrar menú al hacer click en un item
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navbar.classList.remove('open');
+                menuToggle.classList.remove('open');
+            }
+        });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !navbar.contains(e.target) && 
+            !menuToggle.contains(e.target) && 
+            navbar.classList.contains('open')) {
+            navbar.classList.remove('open');
+            menuToggle.classList.remove('open');
+        }
+    });
+
+    // Manejar cambio de tamaño de ventana
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navbar.classList.remove('open');
+            menuToggle.classList.remove('open');
+        }
     });
 }
 
