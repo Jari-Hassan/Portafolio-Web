@@ -153,7 +153,7 @@ El sitio está optimizado para obtener altas puntuaciones en:
 ## 🔗 Enlaces y Contacto
 
 - **Portfolio**: [https://jari-upc.github.io/](https://jari-upc.github.io/)
-- **LinkedIn**: [linkedin.com/in/jari-hassan](https://linkedin.com/in/jari-hassan)
+- **LinkedIn**: [linkedin.com/in/jari-hassan](https://linkedin.com/in/Jari-UPC)
 - **GitHub**: [github.com/jarihassan](https://github.com/jarihassan)
 - **WhatsApp**: +51 932 572 013
 - **Instagram**: [@jarihassan_](https://instagram.com/jarihassan_)
