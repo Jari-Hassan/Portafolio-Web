@@ -3,66 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TechStore - Tu tienda premium de tecnología. Encuentra laptops, smartphones y accesorios de última generación con la mejor calidad y precios competitivos.">
-    <meta name="keywords" content="tecnología, laptops, smartphones, accesorios, MacBook, iPhone, Samsung, Dell, HP">
-    <meta name="author" content="TechStore">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="TechStore - Tu tienda premium de tecnología empresarial">
+    <title>TechStore - Tecnología Premium</title>
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="TechStore - Tecnología Premium">
-    <meta property="og:description" content="Descubre nuestra selección exclusiva de productos tecnológicos de vanguardia">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/html/techstore.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=630&fit=crop">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='%236366f1'><path d='M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z'/></svg>">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TechStore - Tecnología Premium">
-    <meta name="twitter:description" content="Tu tienda de tecnología de confianza">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=630&fit=crop">
-    
-    <title>TechStore - Tienda Virtual Premium</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231e3a8a'><path d='M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V17C19 18.1 18.1 19 17 19H7C5.9 19 5 18.1 5 17V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V17H17V6H7Z'/></svg>">
-    <link rel="canonical" href="/html/techstore.html">
-    
-    <!-- Preload critical resources -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
-    <link rel="preload" href="/css/techstore.css" as="style">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/techstore.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
-    <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#0f0f23">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/techstore.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="nav">
-                <div class="logo">
+            <nav class="nav">
+                <a href="#" class="logo">
                     <i class="fas fa-laptop"></i>
-                    <span>TechStore</span>
-                </div>
-                <nav class="nav-menu">
+                    <span class="logo-tech">Tech</span><span class="logo-store">Store</span>
+                </a>
+                <div class="nav-menu">
                     <a href="#" class="nav-link active" data-category="all">Todos</a>
                     <a href="#" class="nav-link" data-category="laptops">Laptops</a>
                     <a href="#" class="nav-link" data-category="phones">Smartphones</a>
+                    <a href="#" class="nav-link" data-category="tablets">Tablets</a>
                     <a href="#" class="nav-link" data-category="accessories">Accesorios</a>
-                </nav>
-                <div class="cart-container">
-                    <button class="cart-btn" id="cartBtn">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </button>
                 </div>
-            </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </nav>
         </div>
     </header>
 
@@ -70,84 +48,203 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>
-                    <span>Tecnología</span>
-                    <span style="background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Empresarial</span>
-                </h1>
-                <p>Soluciones tecnológicas premium para profesionales y empresas. Equipos de última generación con garantía extendida y soporte especializado.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                    <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">
-                        <i class="fas fa-arrow-right"></i>
-                        Ver Catálogo
-                    </button>
-                    <button class="btn btn-outline" onclick="openCartModal()">
-                        <i class="fas fa-shopping-cart"></i>
-                        Carrito (<span id="cartCountHero">0</span>)
-                    </button>
-                </div>
-                <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.8;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent);">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Envío Express</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted);">24-48 horas</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent);">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Garantía Extendida</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted);">Hasta 3 años</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent);">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Soporte 24/7</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted);">Asistencia técnica</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent);">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Productos Certificados</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted);">Calidad garantizada</div>
-                    </div>
-                </div>
+                <h1>TechStore</h1>
+                <p>Descubre nuestra exclusiva gama de soluciones tecnológicas premium diseñadas para profesionales y empresas que exigen lo mejor.</p>
+                <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">
+                    <i class="fas fa-arrow-right"></i>
+                    Ver Catálogo
+                </button>
             </div>
-        </div>
-        <!-- Professional background elements -->
-        <div style="position: absolute; top: 15%; left: 8%; font-size: 2rem; opacity: 0.05; color: var(--accent);">
-            <i class="fas fa-laptop-code"></i>
-        </div>
-        <div style="position: absolute; top: 70%; right: 10%; font-size: 1.8rem; opacity: 0.05; color: var(--accent);">
-            <i class="fas fa-mobile-alt"></i>
-        </div>
-        <div style="position: absolute; bottom: 25%; left: 15%; font-size: 1.5rem; opacity: 0.05; color: var(--accent);">
-            <i class="fas fa-server"></i>
         </div>
     </section>
 
-    <!-- Search Bar -->
-    <section class="search-section">
+    <!-- Categories -->
+    <section class="categories-section">
         <div class="container">
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Buscar productos...">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Smartphones</h3>
+                    <p>Dispositivos móviles de última generación</p>
+                    <button class="category-btn" onclick="showCategory('phones')">Ver Productos</button>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Laptops</h3>
+                    <p>Computadoras portátiles profesionales</p>
+                    <button class="category-btn" onclick="showCategory('laptops')">Ver Productos</button>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h3>Tablets</h3>
+                    <p>Dispositivos táctiles versátiles</p>
+                    <button class="category-btn" onclick="showCategory('tablets')">Ver Productos</button>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Accesorios</h3>
+                    <p>Complementos y periféricos premium</p>
+                    <button class="category-btn" onclick="showCategory('accessories')">Ver Productos</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Products -->
     <section id="products" class="products-section">
         <div class="container">
             <div class="section-header">
-                <h2>Catálogo Empresarial</h2>
-                <p>Equipos tecnológicos de alta gama para profesionales, empresas y organizaciones que buscan rendimiento superior y confiabilidad.</p>
+                <h2 id="productsTitle">Catálogo Corporativo</h2>
+                <p id="productsDescription">Explora nuestra selección completa de equipos tecnológicos premium.</p>
+                <div class="category-filter">
+                    <button class="filter-btn active" onclick="showCategory('all')">Todos</button>
+                    <button class="filter-btn" onclick="showCategory('phones')">Smartphones</button>
+                    <button class="filter-btn" onclick="showCategory('laptops')">Laptops</button>
+                    <button class="filter-btn" onclick="showCategory('tablets')">Tablets</button>
+                    <button class="filter-btn" onclick="showCategory('accessories')">Accesorios</button>
+                </div>
+                
+                <!-- Search -->
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                </div>
             </div>
             <div class="products-grid" id="productsGrid">
-                <!-- Los productos se cargarán dinámicamente -->
+                <!-- Productos se cargarán dinámicamente -->
+            </div>
+            <div class="back-to-categories" style="display: none;">
+                <button class="btn btn-secondary" onclick="showAllCategories()">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver a Categorías
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section id="productDetailPage" class="product-detail-page" style="display: none;">
+        <div class="container">
+            <div class="product-detail-header">
+                <button class="back-btn-prominent" onclick="closeProductDetail()">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Volver al Catálogo</span>
+                </button>
+                <nav class="breadcrumb">
+                    <span>Inicio</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="breadcrumbCategory">Productos</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="breadcrumbProduct">Producto</span>
+                </nav>
+            </div>
+            <div class="product-detail-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="detailMainImage" src="" alt="">
+                    </div>
+                    <div class="image-thumbnails">
+                        <img class="thumbnail active" src="" alt="">
+                        <img class="thumbnail" src="" alt="">
+                        <img class="thumbnail" src="" alt="">
+                    </div>
+                </div>
+                <div class="product-info-detail">
+                    <h1 id="detailProductName"></h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(4.5) - 127 reseñas</span>
+                    </div>
+                    <div class="product-price-detail">
+                        <span class="current-price" id="detailProductPrice"></span>
+                        <span class="original-price">$1,299.99</span>
+                        <span class="discount">15% OFF</span>
+                    </div>
+                    <div class="product-description">
+                        <h3>Descripción</h3>
+                        <p id="detailProductDescription"></p>
+                    </div>
+                    <div class="product-features">
+                        <h3>Características Principales</h3>
+                        <div class="features-grid" id="detailProductFeatures">
+                            <!-- Se llenarán dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="product-specifications">
+                        <h3>Especificaciones Técnicas</h3>
+                        <div class="specs-paragraph" id="detailProductSpecs">
+                            <!-- Se llenarán dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="product-actions-detail">
+                        <div class="quantity-section">
+                            <label>Cantidad:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" id="decreaseQtyDetail">-</button>
+                                <span id="quantityDetail">1</span>
+                                <button class="qty-btn" id="increaseQtyDetail">+</button>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary btn-large" id="addToCartDetail">
+                                <i class="fas fa-shopping-cart"></i>
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-benefits">
+                        <h3>Beneficios Incluidos</h3>
+                        <p class="benefits-description">
+                            Con tu compra obtienes envío gratuito, devolución sin costo, garantía extendida 
+                            y soporte técnico especializado las 24 horas.
+                        </p>
+                        <div class="benefits-grid">
+                            <div class="benefit">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div>
+                                    <strong>Envío Express</strong>
+                                    <span>Entrega en 24-48h</span>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-undo"></i>
+                                <div>
+                                    <strong>Devolución Gratis</strong>
+                                    <span>30 días para cambios</span>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <strong>Garantía Extendida</strong>
+                                    <span>Protección por 3 años</span>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-headset"></i>
+                                <div>
+                                    <strong>Soporte 24/7</strong>
+                                    <span>Asistencia especializada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -156,64 +253,28 @@
     <div class="modal" id="cartModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Carrito de Compras</h3>
-                <button class="close-btn" id="closeCartBtn">
-                    <i class="fas fa-times"></i>
-                </button>
+                <h2>Carrito de Compras</h2>
+                <button class="close-btn" id="closeCartBtn">&times;</button>
             </div>
-            <div class="modal-body">
-                <div id="cartItems"></div>
-                <div class="cart-total">
-                    <div class="total-row">
-                        <span>Total: </span>
-                        <span id="cartTotal">$0.00</span>
-                    </div>
-                </div>
+            <div class="modal-body" id="cartItems">
+                <!-- Items del carrito se cargarán aquí -->
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" id="clearCartBtn">Vaciar Carrito</button>
-                <button class="btn btn-primary" id="checkoutBtn">Proceder al Pago</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Detail Modal -->
-    <div class="modal" id="productModal">
-        <div class="modal-content product-modal-content">
-            <div class="modal-header">
-                <h3 id="productModalTitle"></h3>
-                <button class="close-btn" id="closeProductBtn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="product-detail-content">
-                    <img id="productModalImage" src="" alt="">
-                    <div class="product-info">
-                        <p id="productModalDescription"></p>
-                        <div class="product-price">
-                            <span id="productModalPrice"></span>
-                        </div>
-                        <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn" id="decreaseQty">-</button>
-                                <span id="quantity">1</span>
-                                <button class="qty-btn" id="increaseQty">+</button>
-                            </div>
-                            <button class="btn btn-primary" id="addToCartFromModal">
-                                Agregar al Carrito
-                            </button>
-                        </div>
-                    </div>
+                <div class="cart-total">
+                    <span>Total: <span id="cartTotal">$0.00</span></span>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-outline" id="clearCartBtn">Vaciar Carrito</button>
+                    <button class="btn btn-primary" id="checkoutBtn">Proceder al Pago</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Success Message -->
+    <!-- Toast -->
     <div class="toast" id="toast">
         <i class="fas fa-check-circle"></i>
-        <span id="toastMessage">Producto agregado al carrito</span>
+        <span id="toastMessage">Mensaje</span>
     </div>
 
     <!-- Footer -->
@@ -225,28 +286,56 @@
                         <i class="fas fa-laptop"></i>
                         <span>TechStore</span>
                     </div>
-                    <p>Tu tienda de tecnología de confianza</p>
+                    <p>Proveedor líder en soluciones tecnológicas empresariales con más de 15 años de experiencia.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces</h4>
+                    <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
                         <li><a href="#">Productos</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Servicios</a></li>
                         <li><a href="#">Soporte</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Síguenos</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (555) 123-4567</a></li>
+                        <li><a href="mailto:info@techstore.com"><i class="fas fa-envelope"></i> info@techstore.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Ciudad, País</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Cookies</a>
+                </div>
             </div>
         </div>
     </footer>
