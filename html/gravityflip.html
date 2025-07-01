@@ -26,11 +26,19 @@
             </div>
         </div>
 
+
         <!-- HUD del juego -->
         <div id="gravity-hud" class="gravity-hud" style="display:none;">
             <span class="hearts" id="gravity-hearts"></span>
             <span class="stars" id="gravity-stars"></span>
             <span class="timer" id="gravity-timer"></span>
+        </div>
+
+        <!-- Controles móviles -->
+        <div id="gravity-mobile-controls" class="gravity-mobile-controls" style="display:none;">
+            <button class="gravity-mobile-btn" id="btn-left" aria-label="Izquierda">◀️</button>
+            <button class="gravity-mobile-btn" id="btn-gravity" aria-label="Invertir gravedad">⏫</button>
+            <button class="gravity-mobile-btn" id="btn-right" aria-label="Derecha">▶️</button>
         </div>
 
         <!-- Canvas del juego -->
@@ -63,7 +71,7 @@
                 <div class="stats" id="gravity-gameover-stats"></div>
                 <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
                     <button class="gravity-btn" id="gravity-retry2-btn" style="width:180px;">Reintentar nivel</button>
-                    <a href="index.html" class="gravity-btn" style="width:180px; text-align:center;">Volver al Portafolio</a>
+                    <a href="/index.html" class="gravity-btn" style="width:180px; text-align:center;">Volver al Portafolio</a>
                 </div>
             </div>
         </div>

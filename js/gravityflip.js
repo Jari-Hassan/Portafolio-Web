@@ -32,6 +32,10 @@ const retry2Btn = document.getElementById('gravity-retry2-btn');
 const heartsSpan = document.getElementById('gravity-hearts');
 const starsSpan = document.getElementById('gravity-stars');
 const timerSpan = document.getElementById('gravity-timer');
+const mobileControls = document.getElementById('gravity-mobile-controls');
+const btnLeft = document.getElementById('btn-left');
+const btnRight = document.getElementById('btn-right');
+const btnGravity = document.getElementById('btn-gravity');
 
 // Configuración de niveles
 const LEVELS = [
@@ -528,13 +532,66 @@ function loop() {
 }
 
 // Event listeners de botones
+
+function isMobile() {
+    return window.innerWidth < 700 || /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+}
+
 playBtn.onclick = () => {
     menu.style.display = 'none';
     hud.style.display = 'flex';
     canvas.style.display = 'block';
+    if (isMobile()) {
+        mobileControls.style.display = 'flex';
+    } else {
+        mobileControls.style.display = 'none';
+    }
     resetLevel(levelIdx);
     requestAnimationFrame(loop);
 };
+// --- Controles táctiles para móvil ---
+let leftPressed = false, rightPressed = false;
+
+function setMobileKey(key, pressed) {
+    keys[key] = pressed;
+}
+
+if (btnLeft && btnRight && btnGravity) {
+    // Izquierda
+    btnLeft.addEventListener('touchstart', e => { e.preventDefault(); leftPressed = true; setMobileKey('ArrowLeft', true); }, {passive:false});
+    btnLeft.addEventListener('touchend', e => { e.preventDefault(); leftPressed = false; setMobileKey('ArrowLeft', false); }, {passive:false});
+    // Derecha
+    btnRight.addEventListener('touchstart', e => { e.preventDefault(); rightPressed = true; setMobileKey('ArrowRight', true); }, {passive:false});
+    btnRight.addEventListener('touchend', e => { e.preventDefault(); rightPressed = false; setMobileKey('ArrowRight', false); }, {passive:false});
+    // Invertir gravedad
+    btnGravity.addEventListener('touchstart', e => {
+        e.preventDefault();
+        // Simula barra espaciadora
+        if (playing && !paused && !ended && !gameover) {
+            gravity *= -1;
+        }
+    }, {passive:false});
+}
+
+// También soporta click para desktop testing
+if (btnLeft && btnRight && btnGravity) {
+    btnLeft.addEventListener('mousedown', e => { setMobileKey('ArrowLeft', true); });
+    btnLeft.addEventListener('mouseup', e => { setMobileKey('ArrowLeft', false); });
+    btnRight.addEventListener('mousedown', e => { setMobileKey('ArrowRight', true); });
+    btnRight.addEventListener('mouseup', e => { setMobileKey('ArrowRight', false); });
+    btnGravity.addEventListener('mousedown', e => { if (playing && !paused && !ended && !gameover) gravity *= -1; });
+}
+
+// Oculta controles móviles si se cambia tamaño de pantalla
+window.addEventListener('resize', () => {
+    if (mobileControls) {
+        if (isMobile() && hud.style.display === 'flex' && canvas.style.display === 'block') {
+            mobileControls.style.display = 'flex';
+        } else {
+            mobileControls.style.display = 'none';
+        }
+    }
+});
 
 continueBtn.onclick = () => {
     paused = false;
